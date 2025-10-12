@@ -1,15 +1,34 @@
 ---
+import Welcome from "../components/Welcome.astro";
+import '../styles/global.css'
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Astro</title>
-  </head>
-  <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <h1>Saving Pixels, one at a time!</h1>
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Astro</title>
+    </head>
+    <body class="min-h-screen bg-gray-50 text-gray-900">
+        <nav class="bg-white shadow-md px-6 py-4">
+            <div class="flex gap-6">
+                <a
+                    href="/"
+                    class="text-blue-100 font-medium transition-colors"
+                    >Home</a
+                >
+                <a
+                    href="/about/"
+                    class="text-blue-100 font-medium transition-colors"
+                    >About</a
+                >
+            </div>
+        </nav>
+
+        <main class="container mx-auto px-6 py-12">
+            <h1 class="text-5xl font-bold text-gray-900 mb-8 text-center">
+                Saving Pixels, one at a time!
+            </h1>
+        </main>
+    </body>
 </html>
