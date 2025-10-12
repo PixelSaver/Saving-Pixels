@@ -1,17 +1,51 @@
 ---
+const pageTitle = "About Me";
+const birthDate = new Date(2008, 0, 15);
+
+const birthTime = 1219156061000;
+const eras = {
+    highschool: 18,
+    college: 24,
+    job: 60,
+    retirement: 70,
+    gone: Infinity,
+};
+
+function getAge(): number {
+    const now = new Date().getTime();
+    return Math.floor((now - birthTime) / (1000 * 60 * 60 * 24 * 365.25) * 1e7) / 1e7;
+}
+
+// Given an age in years, return the estimated era of life I'm in.
+function getEra(age: number): String {
+    for (let i = 0; i < Object.keys(eras).length; i++) {
+        const [eraName, maxAge] = Object.entries(eras)[0];
+        if (age < maxAge) {
+            return eraName;
+        }
+    }
+    return "unknown";
+}
+
+const age = getAge();
+const era = getEra(age);
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} >
-    <title>Astro</title>
-  </head>
-  <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a> <h1>About Me</h1>
-    <p>I am a teenage dev currently participating in this super cool organization called Hackclub!</p>
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>{pageTitle}</title>
+    </head>
+    <body>
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <h1>{pageTitle}</h1>
+        <p>
+            I am a teenage dev currently participating in this super cool
+            organization called Hackclub!
+        </p>
+        <p>I am {age} years old.</p>
+        <p id="clock"></p>
+    </body>
 </html>
