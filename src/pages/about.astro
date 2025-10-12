@@ -1,34 +1,6 @@
 ---
+import AgeIsland from '../components/AgeIsland.astro';
 const pageTitle = "About Me";
-const birthDate = new Date(2008, 0, 15);
-
-const birthTime = 1219156061000;
-const eras = {
-    highschool: 18,
-    college: 24,
-    job: 60,
-    retirement: 70,
-    gone: Infinity,
-};
-
-function getAge(): number {
-    const now = new Date().getTime();
-    return Math.floor((now - birthTime) / (1000 * 60 * 60 * 24 * 365.25) * 1e7) / 1e7;
-}
-
-// Given an age in years, return the estimated era of life I'm in.
-function getEra(age: number): String {
-    for (let i = 0; i < Object.keys(eras).length; i++) {
-        const [eraName, maxAge] = Object.entries(eras)[0];
-        if (age < maxAge) {
-            return eraName;
-        }
-    }
-    return "unknown";
-}
-
-const age = getAge();
-const era = getEra(age);
 ---
 
 <html lang="en">
@@ -45,7 +17,6 @@ const era = getEra(age);
             I am a teenage dev currently participating in this super cool
             organization called Hackclub!
         </p>
-        <p>I am {age} years old.</p>
-        <p id="clock"></p>
+        <AgeIsland /> 
     </body>
 </html>

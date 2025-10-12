@@ -1,0 +1,52 @@
+---
+const birthTime = 1219156061000;
+const eras = {
+  highschool: 18,
+  college: 24,
+  job: 60,
+  retirement: 70,
+  gone: Infinity,
+};
+---
+
+<div id="age-island">
+  <p>I am <span id="age"></span> years old.</p>
+  <span id="era"></span>
+  <script is:inline define:vars={{ birthTime, eras }}>
+    const ageEl = document.getElementById("age");
+    const eraEl = document.getElementById("era");
+    
+    function getAge() {
+      const now = Date.now();
+      const ageInMs = now - birthTime;
+      return (ageInMs / (1000 * 60 * 60 * 24 * 365.25)).toFixed(8);
+    }
+    
+    function getEra(age) {
+      for (const [eraName, maxAge] of Object.entries(eras)) {
+        if (age < maxAge) return eraName;
+      }
+      return "unknown";
+    }
+    function scheduleNextUpdate() {
+      const currentAge = getAge();
+      const nextAge = Math.floor(currentAge * 1e8 + 1) / 1e8;
+      const msPerYear = 1000 * 60 * 60 * 24 * 365.25;
+      const timeToNextAge = (nextAge - currentAge) * msPerYear;
+            
+      setTimeout(() => {
+        update();
+        scheduleNextUpdate();
+      }, timeToNextAge);
+    }
+    function update() {
+      const age = getAge();
+      const era = getEra(age);
+      ageEl.textContent = age;
+      eraEl.textContent = `I'm currently in ${era}`;
+    }
+    
+    update();
+    scheduleNextUpdate()
+  </script>
+</div>>
