@@ -1,7 +1,8 @@
 ---
 import Welcome from "../components/Welcome.astro";
-import '../styles/global.css'
+import "../styles/global.css";
 ---
+
 <!-- Following PedroTech's TailwindCSS Tutorial -->
 <html lang="en">
     <head>
@@ -9,8 +10,8 @@ import '../styles/global.css'
         <meta name="viewport" content="width=device-width" />
         <title>Astro</title>
     </head>
-    <div class="bg-teal-50 w-full h-screen">
-        <div class="bg-teal-500 px-6 py-4 text-teal-50 flex justify-between mb-8"> 
+    <div class="bg-teal-50 w-full min-h-screen flex flex-col">
+        <div class="bg-teal-500 px-6 py-4 text-teal-50 flex justify-between mb-8">
             <h1 class="text-lg font-light">SavingPixels</h1>
             <nav class="flex gap-4">
                 <a href="#">Home</a>
@@ -18,20 +19,65 @@ import '../styles/global.css'
                 <a href="#">Contact</a>
             </nav>
         </div>
-        <div class="space-y-8">
+        <div class="space-y-8 flex-grow">
             <section class="text-center">
-                <h2 class="mb-4 text-4xl font-semibold sm:text-xl"> Welcome </h2>
-                <p>This is the main content of the site, with a bunch of stuff</p>
+                <h2 class="mb-4 text-4xl font-semibold sm:text-xl">Welcome</h2>
+                <p>
+                    This is the main content of the site, with a bunch of stuff
+                </p>
             </section>
             <section>
-                <h2 class="mb-4 text-center text-xl font-semibold"> Features </h2>
+                <h2 class="mb-4 text-center text-xl font-semibold">Features</h2>
                 <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    <div class="bg-amber-500 rounded p-4 hover:bg-amber-300/70 hover:shadow-lg">Feature 1</div>
-                    <div class="bg-amber-500 rounded p-4 hover:bg-amber-500/70 hover:shadow-lg">Feature 2</div>
-                    <div class="bg-amber-700 rounded p-4 hover:bg-amber-700/70 hover:shadow-lg">Feature 3</div>
+                    <div
+                        class="bg-amber-300 rounded p-4 hover:bg-amber-300/70 hover:shadow-lg"
+                    >
+                        Feature 1
+                    </div>
+                    <div
+                        class="bg-amber-500 rounded p-4 hover:bg-amber-500/70 hover:shadow-lg"
+                    >
+                        Feature 2
+                    </div>
+                    <div
+                        class="bg-amber-700 rounded p-4 hover:bg-amber-700/70 hover:shadow-lg"
+                    >
+                        Feature 3
+                    </div>
+                    <div
+                        class="bg-amber-300 rounded p-4 hover:bg-amber-300/70 hover:shadow-lg"
+                    >
+                        Feature 1
+                    </div>
+                    <div
+                        class="bg-amber-500 rounded p-4 hover:bg-amber-500/70 hover:shadow-lg"
+                    >
+                        Feature 2
+                    </div>
+                    <div
+                        class="bg-amber-700 rounded p-4 hover:bg-amber-700/70 hover:shadow-lg"
+                    >
+                        Feature 3
+                    </div>
+                    <div
+                        class="bg-amber-300 rounded p-4 hover:bg-amber-300/70 hover:shadow-lg"
+                    >
+                        Feature 1
+                    </div>
+                    <div
+                        class="bg-amber-500 rounded p-4 hover:bg-amber-500/70 hover:shadow-lg"
+                    >
+                        Feature 2
+                    </div>
+                    <div
+                        class="bg-amber-700 rounded p-4 hover:bg-amber-700/70 hover:shadow-lg"
+                    >
+                        Feature 3
+                    </div>
                 </div>
             </section>
         </div>
-        <div class="">&copy; 2025 PixelSaver All rights reserved</div>
+        <div class="bg-teal-500 text-center text-sm text-teal-100 py-3 mt-4">&copy; 2025 PixelSaver All rights reserved</div>
     </div>
+
 </html>
