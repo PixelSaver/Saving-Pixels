@@ -10,7 +10,7 @@ import '../styles/global.css'
         <title>Astro</title>
     </head>
     <div class="bg-teal-50 w-full h-screen">
-        <div class="bg-teal-500 px-6 py-4 text-teal-50 flex justify-between"> 
+        <div class="bg-teal-500 px-6 py-4 text-teal-50 flex justify-between mb-8"> 
             <h1 class="text-lg font-light">SavingPixels</h1>
             <nav class="flex gap-4">
                 <a href="#">Home</a>
@@ -18,7 +18,19 @@ import '../styles/global.css'
                 <a href="#">Contact</a>
             </nav>
         </div>
-        <div> Core </div>
+        <div>
+            <section class="text-center">
+                <h2 class="mb-4 text-xl font-semibold"> Welcome </h2>
+                <p>This is the main content of the site, with a bunch of stuff</p>
+            </section>
+            <section>
+                <h2 class="mb-4 text-center text-xl font-semibold"> Features </h2>
+                <div class="grid grid-cols-2 gap-6">
+                    <h2 class="bg-amber-300"> feature 1 </h2>
+                    <h2 class="bg-amber-500"> feature 2 </h2>
+                </div>
+            </section>
+        </div>
         <div> Footer </div>
     </div>
 </html>
