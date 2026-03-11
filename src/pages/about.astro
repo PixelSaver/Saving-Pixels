@@ -1,24 +1,15 @@
 ---
 import AgeIsland from "../components/AgeIsland.astro";
-import Header from "../components/Header.astro";
 const pageTitle = "About Me";
+import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 ---
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>{pageTitle}</title>
-    </head>
-
-    <body class="min-h-screen bg-blue text-gray-dark">
-        <Header />
-        <h1>{pageTitle}</h1>
-        <p>
-            I am a teenage dev currently participating in this super cool
-            organization called Hackclub!
-        </p>
-        <AgeIsland />
-    </body>
-</html>
+<Layout>
+  <h1>{pageTitle}</h1>
+  <p>
+    I am a teenage dev currently participating in this super cool organization
+    called Hackclub!
+  </p>
+  <AgeIsland />
+</Layout>

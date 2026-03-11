@@ -1,3 +1,7 @@
+---
+import Header from '../components/Header.astro';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,10 +9,16 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Saving Pixels</title>
 	</head>
-	<body>
-		<slot />
+	<body class="min-h-screen bg-blue text-gray-dark">
+	    <Header />
+		<main>
+    		<slot />
+		</main>
+		<footer>
+		Copyright © 2026 PixelSaver
+		</footer>
 	</body>
 </html>
 
