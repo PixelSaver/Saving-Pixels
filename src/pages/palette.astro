@@ -1,8 +1,7 @@
 ---
-import Welcome from "../components/Welcome.astro";
 import "../styles/global.css";
-import Header from "../components/Header.astro";
 ---
+
 
 <html lang="en">
     <head>
@@ -11,7 +10,21 @@ import Header from "../components/Header.astro";
         <title>Astro</title>
     </head>
     <body class="min-h-screen bg-blue text-purple-950">
-        <Header />
+        <nav class="bg-white shadow-md px-6 py-4">
+            <div class="flex gap-6">
+                <a
+                    href="/Saving-Pixels/"
+                    class="text-pink-500 font-medium transition-colors hover:text-pink-700"
+                    >Home</a
+                >
+                <a
+                    href="/Saving-Pixels/about/"
+                    class="text-pink-500 font-medium transition-colors hover:text-pink-700"
+                    >About</a
+                >
+            </div>
+        </nav>
+
         <main class="container mx-auto px-6 py-12">
             <h1 class="text-5xl font-bold mb-8 text-center">
                 Saving Pixels, one at a time!
