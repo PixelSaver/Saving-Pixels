@@ -1,3 +1,10 @@
 @import "tailwindcss";
 
-@custom-variant hover (&:hover);
+@theme {
+    /*--color-*: initial;*/
+    --color-pink-light: #fbbbad;
+    --color-pink-medium: #ee8695;
+    --color-blue: #4a7a96;
+    --color-gray-dark: #333f58;
+    --color-gray-darker: #292831;    
+}

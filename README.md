@@ -1,3 +1,8 @@
+---
+title: 'README'
+
+---
+
 # Saving Pixels
 
 
@@ -69,7 +74,8 @@
 ## About The Project
 
 ### Overall
-My personal website!!
+My personal website!! 
+Palette 
 
 ### What even is this?
 Just a website for now, hoping for cool features here later!
