@@ -5,5 +5,5 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="PixelSaver - Readme">
-  <readme.default /> 
+    <article class="prose prose-pink" set:html={readme.compiledContent()} />
 </Layout>

@@ -1,17 +1,30 @@
 ---
-const birthTime = 1219156061000;
-const eras = {
-  highschool: 18,
-  college: 24,
-  job: 60,
-  retirement: 70,
-  gone: Infinity,
-};
+interface Props {
+  birthTime: number,
+  eras?: Record<string, number>
+  class?: string
+  ageClass?: string
+  eraClass?: string
+  
+}
+const {
+  birthTime,
+  eras={
+    highschool: 18,
+    college: 24,
+    job: 60,
+    retirement: 70,
+    gone: Infinity,
+  },
+  class: wrapperClass = "",
+  ageClass,
+  eraClass,
+} = Astro.props;
 ---
 
-<div id="age-island">
-  <p>I am <span id="age"></span> years old.</p>
-  <span id="era"></span>
+<div id="age-island" class={wrapperClass}>
+  <p>I am <span id="age" class={ageClass}></span> years old.</p>
+  <p>I'm currently in <span id="era" class={eraClass}></span>.</p>
   <script is:inline define:vars={{ birthTime, eras }}>
     const ageEl = document.getElementById("age");
     const eraEl = document.getElementById("era");
@@ -43,10 +56,10 @@ const eras = {
       const age = getAge();
       const era = getEra(age);
       ageEl.textContent = age;
-      eraEl.textContent = `I'm currently in ${era}`;
+      eraEl.textContent = `${era}`;
     }
     
     update();
     scheduleNextUpdate()
   </script>
-</div>>
+</div>

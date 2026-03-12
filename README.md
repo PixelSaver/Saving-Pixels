@@ -210,31 +210,6 @@ Project Link: [https://github.com/PixelSaver/saving-pixels](https://github.com/P
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Many thanks for these people for letting me use their work for free! See 'ATTRIBUTIONS.MD' for a cleaner look!
-
-* The man who inspired me to do all of this, [Hipxel](https://github.com/Hipxel-dev) 
-* My good friend [OfKnee](https://github.com/ofKnee) for the coin and blue coin spritesheets
-* [Siege](https://siege.hackclub.com/castle), the YSWS that pushed me to do this.
-* [Matiassinger's Readme Template](https://github.com/othneildrew/Best-README-Template)
-* [Origami Dev Pete's TODO Manager Godot Addon](https://github.com/OrigamiDev-Pete/TODO_Manager)
-* [Budzio's Godot Super Wakatime Addon](https://github.com/BudzioT/Godot_Super-Wakatime)
-* ManTimesTwo's [Spatial Navigation Mapper Addon](https://github.com/Mantimestwo/Godot-spatial-navigation-mapper)
-* [OSU](https://github.com/ppy/osu) and OSU Lazer soundbites from ppy
-* glass_002.ogg by [Kenney.nl](www.kenney.nl)
-* ui_reject.mp3 Sound Effect by <a href="https://pixabay.com/users/audley_fergine-32337609/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=327756">Hanifi Şahin</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=327756">Pixabay</a>
-* Ansdor for the [button icons](https://ansdor.itch.io/button-icons)
-
-* glitch_1.mp3, glitch_intro.mp3, glitch_logo.mp3, heartbeat.mp3 Sound Effect by <a href="https://pixabay.com/users/dragon-studio-38165424/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=397982">DRAGON-STUDIO</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=397982">Pixabay</a>
-* glitch_2.mp3 Sound Effect by <a href="https://pixabay.com/users/kakaist-48093450/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=312910">kave msri</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=312910">Pixabay</a>
-* glitch_3.mp3, glitch_4.mp3, glitch_reverb.mp3 Sound Effect by <a href="https://pixabay.com/users/sound_garage-47313534/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=311803">SOUND_GARAGE</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=311803">Pixabay</a>
-* glass_shatter.mp3 Sound Effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6898">freesound_community</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6898">Pixabay</a>
-
-* Nikoichu for the [pixel icons](https://nikoichu.itch.io/pixel-icons)
-* [Claude](https://claude.ai/) and [ChatGPT](https://chatgpt.com) who helped me write the editor scripts for tweenables (find them at `/Scripts/Editor/')
-
-https://godotshaders.com/shader/pseudo-pixel-sorting-v2/
-https://godotshaders.com/shader/glitch-effect-shader-for-godot-engine-4/
-https://godotshaders.com/shader/glitch-transition/
 
 <!--
 * [Choose an Open Source License](https://choosealicense.com)
@@ -248,40 +223,3 @@ https://godotshaders.com/shader/glitch-transition/
 -->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
-
-[Godot]: https://godotengine.org/assets/press/icon_monochrome_dark.png
-[Godot-url]: [https://github.com/godotengine/godot](https://godotengine.org)
-
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
