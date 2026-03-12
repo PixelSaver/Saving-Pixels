@@ -16,61 +16,37 @@ concurrency:
 
 env:
   BUILD_PATH: "."  # default value
-
+  
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # Checkout repo
       - uses: actions/checkout@v4
 
-      # Setup Node
-      - uses: actions/setup-node@v4
+      # Install Bun
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: 20
+          bun-version: latest
 
-      # Detect package manager
-      - name: Detect package manager
-        id: detect-package-manager
-        run: |
-          if [ -f yarn.lock ]; then
-            echo "manager=yarn" >> $GITHUB_OUTPUT
-            echo "install_command=install" >> $GITHUB_OUTPUT
-            echo "lockfile=yarn.lock" >> $GITHUB_OUTPUT
-          else
-            echo "manager=npm" >> $GITHUB_OUTPUT
-            echo "install_command=ci" >> $GITHUB_OUTPUT
-            echo "lockfile=package-lock.json" >> $GITHUB_OUTPUT
-          fi
-
-      # Cache dependencies
-      - name: Cache dependencies
+      # Cache Bun dependencies
+      - name: Cache Bun
         uses: actions/cache@v3
         with:
           path: |
-            ~/.npm
-            ~/.cache/yarn
-            node_modules
-          key: ${{ runner.os }}-deps-${{ hashFiles(steps.detect-package-manager.outputs.lockfile) }}
+            ~/.bun
+            bun.lockb
+          key: ${{ runner.os }}-bun-${{ hashFiles('bun.lockb') }}
           restore-keys: |
-            ${{ runner.os }}-deps-
+            ${{ runner.os }}-bun-
 
       # Install dependencies
       - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.install_command }}
+        run: bun install
 
       # Build Astro site
-      - name: Build with Astro
-        run: npx astro build
-        working-directory: ${{ env.BUILD_PATH }}
-
-      # Setup Pages
-      - uses: actions/configure-pages@v5
-
-      # Upload artifact
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: ${{ env.BUILD_PATH }}/dist
+      - name: Build Astro
+        run: bun astro build
 
   deploy:
     needs: build
