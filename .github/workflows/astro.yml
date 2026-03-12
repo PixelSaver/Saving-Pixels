@@ -53,6 +53,13 @@ jobs:
       # Build Astro site
       - name: Build Astro
         run: bun astro build
+        
+      # Upload artifact for deployment
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+          artifact-name: github-pages
 
   deploy:
     needs: build
