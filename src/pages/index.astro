@@ -1,10 +1,14 @@
 ---
 import "../styles/global.css";
 import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
-<Layout>
+<Layout title="PixelSaver - Home" class="text-cyan-50">
   <main class="container mx-auto px-6 py-12">
+      <div class="hover:bg-red-500 bg-blue-500 p-4 text-white">
+        Hover test
+      </div>
     <h1 class="text-5xl font-bold mb-8 text-center">
       Saving Pixels, one at a time!
     </h1>
@@ -14,10 +18,6 @@ import Layout from "../layouts/Layout.astro";
       but here I am, typing this into my laptop. Funny how the world
       works.
     </p>
-    <div class="bg-pink-light p-4">Pink light background</div>
-    <div class="bg-pink-medium p-4">Pink medium background</div>
-    <div class="bg-blue p-4">Blue background</div>
-    <div class="bg-gray-dark p-4">Gray dark background</div>
-    <div class="bg-gray-darker p-4">Gray darker background</div>
+    <Card title="Showoff" description="Things I'm trying out in Astro while learning" href="/Saving-Pixels/showoff" />
   </main>
 </Layout>
