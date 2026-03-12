@@ -10,7 +10,9 @@ interface Props {
 const { title, description, href } = Astro.props;
 ---
 
-<div class="shadow-md hover:shadow-lg hover:-translate-y-0.5 hover:scale-101 hover:text-pink-light transition-all duration-300 bg-gray-dark text-pink-medium p-4 border rounded-md">
+<a class="block shadow-md hover:shadow-lg hover:-translate-y-0.5 hover:scale-101 hover:text-pink-light transition-all duration-300 bg-gray-dark text-pink-medium p-4 border rounded-md"
+    href={href}
+>
     <h3>{title}</h3>
     {
       /// Truthy that checks if description is null
@@ -22,9 +24,9 @@ const { title, description, href } = Astro.props;
         <slot />
     </div>
     
-    {href && (
+    <!-- {href && (
     <a href={href}>
         Learn More ->
     </a>
-    )}
-</div>
+    )} -->
+</a>

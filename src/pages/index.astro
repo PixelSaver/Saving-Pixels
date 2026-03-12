@@ -6,7 +6,15 @@ import Card from "../components/Card.astro";
 
 <Layout title="PixelSaver - Home" class="text-cyan-50">
   <main class="container mx-auto px-6 py-12">
-    <h1 class="text-5xl font-bold mb-8 text-center">
+      <!-- 
+      From- To is a gradient
+      text-transparent and bg-clip-text is the thing to make it look from behind the text
+      leading-snug fits the j, g, y, etc that comes out from below
+      -->
+    <h1 class="text-5xl font-bold mb-8 text-center
+        from-pink-medium to-pink-light bg-radial-[at_50%_75%] text-transparent bg-clip-text 
+        leading-snug
+    ">
       Saving Pixels, one at a time!
     </h1>
     <p>

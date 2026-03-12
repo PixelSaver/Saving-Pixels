@@ -1,17 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="Showoff">
     <div class="flex gap-2 m-4">
-        <div class="flex-1 bg-amber-300">
-            <h1>Showoff</h1>
+        <div class="flex-1">
+            <Card title="Showoff" description="Testing thigns out" />
         </div>
-        <div class="flex-1 bg-blue-600">
-            <h1>Showoff</h1>
+        <div class="flex-1">
+            <Card title="Showoff" description="Testing thigns out" />
         </div>
-        <div class="flex-1 bg-fuchsia-300">
-            <h1>Showoff</h1>
+        <div class="flex-1">
+            <Card title="Showoff" description="Testing thigns out" />
         </div>
     </div>
+    <button class="bg-blue-500 transition duration-300 ease-out hover:scale-110 hover:bg-indigo-500 ">
+      Save Changes
+    </button>
 </Layout>
