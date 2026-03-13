@@ -59,7 +59,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 - [X] Main page
 - [ ] Slash pages
   - [X] About
-  - [ ] Blank
+  - [X] Blank
   - [ ] Carry
   - [ ] Credits (include [slashpages](https://slashpages.net))
   - [ ] Contact
@@ -67,7 +67,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
   - [ ] Hello
   - [ ] Ideas
   - [ ] Interests
-  - [ ] Links
+  - [X] Links
   - [ ] Log (changelog)
   - [ ] Nope
   - [ ] Now
