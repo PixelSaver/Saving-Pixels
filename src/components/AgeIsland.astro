@@ -26,40 +26,40 @@ const {
   <p>I am <span id="age" class={ageClass}></span> years old.</p>
   <p>I'm currently in <span id="era" class={eraClass}></span>.</p>
   <script is:inline define:vars={{ birthTime, eras }}>
-    const ageEl = document.getElementById("age");
-    const eraEl = document.getElementById("era");
+  const ageEl = document.getElementById("age");
+  const eraEl = document.getElementById("era");
+  
+  function getAge() {
+    const now = Date.now();
+    const ageInMs = now - birthTime;
+    return (ageInMs / (1000 * 60 * 60 * 24 * 365.25)).toFixed(8);
+  }
+  
+  function getEra(age) {
+    for (const [eraName, maxAge] of Object.entries(eras)) {
+      if (age < maxAge) return eraName;
+    }
+    return "unknown";
+  }
+  function scheduleNextUpdate() {
+    const currentAge = getAge();
+    const nextAge = Math.floor(currentAge * 1e8 + 1) / 1e8;
+    const msPerYear = 1000 * 60 * 60 * 24 * 365.25;
+    const timeToNextAge = (nextAge - currentAge) * msPerYear;
     
-    function getAge() {
-      const now = Date.now();
-      const ageInMs = now - birthTime;
-      return (ageInMs / (1000 * 60 * 60 * 24 * 365.25)).toFixed(8);
-    }
-    
-    function getEra(age) {
-      for (const [eraName, maxAge] of Object.entries(eras)) {
-        if (age < maxAge) return eraName;
-      }
-      return "unknown";
-    }
-    function scheduleNextUpdate() {
-      const currentAge = getAge();
-      const nextAge = Math.floor(currentAge * 1e8 + 1) / 1e8;
-      const msPerYear = 1000 * 60 * 60 * 24 * 365.25;
-      const timeToNextAge = (nextAge - currentAge) * msPerYear;
-            
-      setTimeout(() => {
-        update();
-        scheduleNextUpdate();
-      }, timeToNextAge);
-    }
-    function update() {
-      const age = getAge();
-      const era = getEra(age);
-      ageEl.textContent = age;
-      eraEl.textContent = `${era}`;
-    }
-    
-    update();
-    scheduleNextUpdate()
+    setTimeout(() => {
+      update();
+      scheduleNextUpdate();
+    }, timeToNextAge);
+  }
+  function update() {
+    const age = getAge();
+    const era = getEra(age);
+    ageEl.textContent = age;
+    eraEl.textContent = `${era}`;
+  }
+  
+  update();
+  scheduleNextUpdate()
   </script>
 </div>

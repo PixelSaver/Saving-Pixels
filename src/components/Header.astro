@@ -1,86 +1,89 @@
 ---
 import "../styles/global.css";
+import Link from "../components/Link.astro";
 
 const pathname = Astro.url.pathname;
 const pageName =
-    pathname === "/Saving-Pixels/"
-    ? "Home"
-    : pathname.split("/").filter(Boolean).pop();
+  pathname === "/Saving-Pixels/"
+  ? "Home"
+  : pathname.split("/").filter(Boolean).pop();
 ---
 
 <nav class="bg-gray-dark shadow-md px-6 py-4 flex w-full">
-    <div class="relative flex items-center justify-between w-full mx-auto">
-        <!-- Left: links -->
-        <div class="flex gap-6">
-            <a
-            href="/Saving-Pixels/"
-            class="text-pink-medium font-medium transition-colors hover:text-pink-light"
-            >Home</a
-            >
-            <a
-            href="/Saving-Pixels/about/"
-            class="text-pink-medium font-medium transition-colors hover:text-pink-light"
-            >About</a
-            >
-        </div>
-        
-        <!-- Middle: Title -->
-        <span
-        class="absolute left-1/2 -translate-x-1/2 text-pink-medium font-medium text-xl"
-        >{pageName}
-        </span>
-        
-        <!-- Right: Hamburger Menu -->
-        <button
-        id="hamburger-btn"
-        type="button"
-        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-md hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
-        aria-label="Open main menu"
-        >
-            <svg
-            class="w-6 h-6"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            >
-                <path stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
-            </svg>
-        </button>
-        
-        <!-- Mobile Menu -->
-        <div
-        id="navbar-default"
-        class="absolute top-full left-0 right-0 hidden bg-gray-dark border-t border-gray-700"
-        >
-            <ul class="flex flex-col p-4 gap-2">
-                <li>
-                    <a href="#" class="block py-2 px-3 text-pink-medium font-medium hover:text-pink-light">Home</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 px-3 text-pink-medium font-medium hover:text-pink-light">About</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 px-3 text-pink-medium font-medium hover:text-pink-light">Services</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 px-3 text-pink-medium font-medium hover:text-pink-light">Pricing</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 px-3 text-pink-medium font-medium hover:text-pink-light">Contact</a>
-                </li>
-            </ul>
-        </div>
+  <div class="relative flex items-center justify-between w-full mx-auto">
+    <!-- Left: links -->
+    <div class="flex gap-6">
+      <Link
+      href="/Saving-Pixels/"
+      class="text-pink-medium font-medium transition-colors hover:text-pink-light"
+      >
+        Home
+      </Link>
+      <Link
+      href="/Saving-Pixels/about/"
+      class="text-pink-medium font-medium transition-colors hover:text-pink-light"
+      >
+        About
+      </Link>
     </div>
     
-    <script is:inline>
-    const btn = document.getElementById("hamburger-btn");
-    const menu = document.getElementById("navbar-default");
+    <!-- Middle: Title -->
+    <span
+    class="absolute left-1/2 -translate-x-1/2 text-pink-medium font-medium text-xl"
+    >{pageName}
+    </span>
     
-    btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-    });
-    </script>
+    <!-- Right: Hamburger Menu -->
+    <button
+    id="hamburger-btn"
+    type="button"
+    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-md hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
+    aria-label="Open main menu"
+    >
+      <svg
+      class="w-6 h-6"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      >
+        <path stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
+      </svg>
+    </button>
     
+    <!-- Mobile Menu -->
+    <div
+    id="navbar-default"
+    class="absolute top-full left-0 right-0 hidden bg-gray-dark border-t border-gray-700"
+    >
+      <ul class="flex flex-col p-4 gap-2">
+        <li>
+          <a href="#" class="block py-2 px-3 text-pink-medium font-medium hover:text-pink-light">Home</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-pink-medium font-medium hover:text-pink-light">About</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-pink-medium font-medium hover:text-pink-light">Services</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-pink-medium font-medium hover:text-pink-light">Pricing</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-pink-medium font-medium hover:text-pink-light">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <script is:inline>
+  const btn = document.getElementById("hamburger-btn");
+  const menu = document.getElementById("navbar-default");
+  
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+  </script>
+  
 </nav>
