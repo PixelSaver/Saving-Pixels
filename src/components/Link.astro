@@ -1,6 +1,6 @@
 ---
-const { href } = Astro.props;
+const { href, class: className = "" } = Astro.props;
 ---
-<a href={href} class="hover:underline decoration-wavy">
+<a href={href} class={`hover:underline decoration-wavy ${className}`}>
   <slot />
 </a>
