@@ -1,0 +1,12 @@
+---
+import * as license from '../../LICENSE.md';
+// import '../styles/global.css'
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="PixelSaver - Readme">
+  
+  <main class="container mx-auto px-6 py-12 grid grid-cols-1 gap-4">
+    <article class="prose prose-pink" set:html={license.compiledContent()} />
+  </main>
+</Layout>

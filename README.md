@@ -56,9 +56,9 @@ This section should list any major frameworks/libraries used to bootstrap your p
 ## Roadmap
 
 ### Pages
-- [ ] Main page
+- [X] Main page
 - [ ] Slash pages
-  - [ ] About
+  - [X] About
   - [ ] Blank
   - [ ] Carry
   - [ ] Credits (include [slashpages](https://slashpages.net))

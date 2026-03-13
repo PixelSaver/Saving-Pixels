@@ -23,7 +23,12 @@ import Card from "../components/Card.astro";
       but here I am, typing this into my laptop. Funny how the world
       works.
     </p>
-    <Card title="Showoff" description="Things I'm trying out in Astro while learning" href="/Saving-Pixels/showoff" />
-    <Card title="Readme" description="Trying things out here too" href="/Saving-Pixels/readme" />
+    <div class="grid gap-2 grid-cols-[repeat(auto-fit,minmax(200px,1fr))]">
+      <Card title="Showoff" description="Things I'm trying out in Astro while learning" href="/Saving-Pixels/showoff" />
+      <Card title="Readme" description="The github readme for this website!" href="/Saving-Pixels/readme" />
+      <Card title="Palette" description="The color palette for this website" href="/Saving-Pixels/palette" />
+      <Card title="About Me" description="Just what you think it is" href="/Saving-Pixels/about" />
+      <Card title="Licensing" description="MIT License" href="/Saving-Pixels/license" />
+    </div>
   </main>
 </Layout>
