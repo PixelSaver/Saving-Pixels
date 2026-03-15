@@ -11,6 +11,7 @@ The formatting here is a bit weird because interally this is a markdown document
 - [Cool Godot animation by the guy himself](https://v.redd.it/a75nw2v13g8e1)
 - [Godot UI System](https://github.com/gamedevserj/UI-System-Godot)
 - [Godot transparent editor](https://www.reddit.com/r/godot/comments/1kkzrfk/god_i_love_transparent_windows/)
+- [Worms asset pack](https://nastanliev.itch.io/worms)
 - [Digital Design - Juice](https://garden.bradwoods.io/notes/design/juice)
 - [Universal Transition Shader](https://godotshaders.com/shader/universal-transition-shader/)
 - [Ripple Shader Godot](https://godotshaders.com/shader/ripple-effect-2/)
